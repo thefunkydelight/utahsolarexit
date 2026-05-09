@@ -1,0 +1,60 @@
+import Link from "next/link";
+import { Phone, ChevronDown } from "lucide-react";
+import { BUSINESS, TICKER_ITEMS } from "@/lib/constants";
+import { Ticker } from "@/components/shared/Ticker";
+
+export function Hero() {
+  return (
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0A0A0A]">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a00]/20 via-transparent to-[#0A0A0A] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,215,0,0.06)_0%,_transparent_60%)] pointer-events-none" />
+
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center pt-20 pb-10">
+        <div className="inline-flex items-center gap-2 bg-[#FFD700]/10 border border-[#FFD700]/30 rounded-full px-4 py-1.5 mb-6">
+          <span className="h-2 w-2 rounded-full bg-[#FFD700] animate-pulse" />
+          <span className="text-xs text-[#FFD700] font-medium">Free Consultations Available Now</span>
+        </div>
+
+        <h1
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F8F8F7] leading-tight mb-6"
+          style={{ fontFamily: "Space Grotesk, sans-serif" }}
+        >
+          Expert Guidance Out of{" "}
+          <span className="text-[#FFD700]">Unfair Solar Agreements</span>
+        </h1>
+
+        <p className="text-lg text-[#858481] max-w-2xl mx-auto mb-8">
+          We connect Utah homeowners with trusted professionals to exit solar leases, PPAs, and contracts.
+          Free consultation — no obligation.
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <a
+            href={BUSINESS.phoneHref}
+            className="flex items-center gap-2 bg-[#FFD700] hover:bg-[#F0A500] text-[#0A0A0A] font-bold text-base px-7 py-3.5 rounded-xl transition-colors w-full sm:w-auto justify-center"
+          >
+            <Phone className="h-5 w-5" />
+            Call {BUSINESS.phone}
+          </a>
+          <Link
+            href="#contact-form"
+            className="flex items-center gap-2 border border-[#34322D] hover:border-[#FFD700]/50 text-[#F8F8F7] hover:text-[#FFD700] font-semibold text-base px-7 py-3.5 rounded-xl transition-colors w-full sm:w-auto justify-center"
+          >
+            Get Free Consultation
+          </Link>
+        </div>
+
+        <Ticker items={TICKER_ITEMS} />
+      </div>
+
+      <a
+        href="#trust-bar"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[#858481] hover:text-[#FFD700] transition-colors animate-bounce"
+        aria-label="Scroll down"
+      >
+        <ChevronDown className="h-6 w-6" />
+      </a>
+    </section>
+  );
+}
