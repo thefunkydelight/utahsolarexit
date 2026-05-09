@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { BUSINESS } from "@/lib/constants";
 import { Phone, Menu, X } from "lucide-react";
 
@@ -20,10 +21,8 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur border-b border-[#34322D]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-[#FFD700] text-xl font-bold" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
-            {BUSINESS.name}
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image src="/Logo_white_text.png" alt={BUSINESS.name} width={400} height={276} className="h-24 w-auto" style={{ width: "auto" }} priority />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
