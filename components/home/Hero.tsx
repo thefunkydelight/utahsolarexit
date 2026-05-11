@@ -17,7 +17,7 @@ export function Hero() {
         </div>
 
         <h1
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F8F8F7] leading-tight mb-6"
+          className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#F8F8F7] leading-tight mb-6"
           style={{ fontFamily: "Space Grotesk, sans-serif" }}
         >
           Expert Guidance Out of{" "}

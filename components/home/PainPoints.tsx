@@ -29,7 +29,7 @@ export function PainPoints() {
                   {point.title}
                 </h3>
               </div>
-              <ul className="space-y-1.5 pl-8">
+              <ul className="space-y-1.5 pl-5">
                 {point.items.map((item) => (
                   <li key={item} className="text-xs text-[#858481] flex items-start gap-1.5">
                     <span className="text-[#FFD700] mt-0.5">·</span>

@@ -22,7 +22,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur border-b border-[#34322D]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          <Image src="/Logo_white_text.png" alt={BUSINESS.name} width={400} height={276} className="h-24 w-auto" style={{ width: "auto" }} priority />
+          <Image src="/Logo_white_text.png" alt={BUSINESS.name} width={400} height={276} className="h-10 sm:h-14 w-auto" style={{ width: "auto" }} priority />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">

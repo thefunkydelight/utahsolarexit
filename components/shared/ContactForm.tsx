@@ -139,7 +139,7 @@ export function ContactForm() {
             {s < 3 && <div className={`h-px flex-1 w-8 transition-colors ${s < step ? "bg-[#FFD700]" : "bg-[#34322D]"}`} />}
           </div>
         ))}
-        <span className="ml-2 text-xs text-[#858481]">Step {step} of 3</span>
+        <span className="ml-2 text-xs text-[#858481] hidden sm:inline">Step {step} of 3</span>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -202,7 +202,7 @@ export function ContactForm() {
 
             <div>
               <label className="block text-xs font-medium text-[#858481] mb-2">What issues are you experiencing? *</label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 gap-2">
                 {ISSUE_OPTIONS.map((issue) => (
                   <button
                     key={issue}
@@ -276,7 +276,7 @@ export function ContactForm() {
               </div>
               <div className="flex justify-between">
                 <span className="text-[#858481]">Issues</span>
-                <span className="text-[#F8F8F7] text-right max-w-[60%]">{issues?.join(", ")}</span>
+                <span className="text-[#F8F8F7] text-right">{issues?.join(", ")}</span>
               </div>
             </div>
 

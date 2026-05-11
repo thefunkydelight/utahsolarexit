@@ -11,7 +11,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <Image src="/Logo_white_text.png" alt={BUSINESS.name} width={360} height={248} className="h-20 w-auto" style={{ width: "auto" }} />
+            <Image src="/Logo_white_text.png" alt={BUSINESS.name} width={360} height={248} className="h-12 sm:h-16 w-auto" style={{ width: "auto" }} />
             <p className="mt-3 text-sm text-[#858481]">
               Connecting Utah homeowners with trusted professionals to exit unfair solar contracts.
             </p>

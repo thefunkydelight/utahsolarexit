@@ -15,11 +15,11 @@ export function Testimonials() {
           <p className="text-[#858481]">Real reviews from real homeowners who regained their freedom.</p>
         </div>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="break-inside-avoid bg-[#0A0A0A] border border-[#34322D] rounded-xl p-5"
+              className="bg-[#0A0A0A] border border-[#34322D] rounded-xl p-5"
             >
               <div className="flex items-center gap-0.5 mb-3">
                 {Array.from({ length: t.rating }).map((_, i) => (
