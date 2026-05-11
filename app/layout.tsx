@@ -40,7 +40,7 @@ export default function RootLayout({
           h1,h2,h3,h4,h5,h6 { font-family: ${spaceGrotesk.style.fontFamily}; }
         `}</style>
       </head>
-      <body className="min-h-full flex flex-col antialiased bg-[#0A0A0A] text-[#F8F8F7]">
+      <body className="min-h-full flex flex-col antialiased bg-[#0A0A0A] text-[#F8F8F7] overflow-x-hidden">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
