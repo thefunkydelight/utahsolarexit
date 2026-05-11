@@ -5,31 +5,31 @@ import { Ticker } from "@/components/shared/Ticker";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0A0A0A]">
+    <section className="relative min-h-[90vh] sm:min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0A0A0A]">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a00]/20 via-transparent to-[#0A0A0A] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,215,0,0.06)_0%,_transparent_60%)] pointer-events-none" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center pt-20 pb-10">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center pt-8 sm:pt-20 pb-8 sm:pb-10">
         <div className="inline-flex items-center gap-2 bg-[#FFD700]/10 border border-[#FFD700]/30 rounded-full px-4 py-1.5 mb-6">
           <span className="h-2 w-2 rounded-full bg-[#FFD700] animate-pulse" />
           <span className="text-xs text-[#FFD700] font-medium">Free Consultations Available Now</span>
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#F8F8F7] leading-tight mb-6"
+          className="text-2xl sm:text-4xl lg:text-6xl font-bold text-[#F8F8F7] leading-tight mb-4 sm:mb-6"
           style={{ fontFamily: "Space Grotesk, sans-serif" }}
         >
           Expert Guidance Out of{" "}
           <span className="text-[#FFD700]">Unfair Solar Agreements</span>
         </h1>
 
-        <p className="text-lg text-[#858481] max-w-2xl mx-auto mb-8">
+        <p className="text-sm sm:text-lg text-[#858481] max-w-2xl mx-auto mb-6 sm:mb-8">
           We connect Utah homeowners with trusted professionals to exit solar leases, PPAs, and contracts.
           Free consultation — no obligation.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12">
           <a
             href={BUSINESS.phoneHref}
             className="flex items-center gap-2 bg-[#FFD700] hover:bg-[#F0A500] text-[#0A0A0A] font-bold text-base px-7 py-3.5 rounded-xl transition-colors w-full sm:w-auto justify-center"
