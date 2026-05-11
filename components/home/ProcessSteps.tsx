@@ -10,7 +10,7 @@ const STEPS = [
   {
     number: "02",
     title: "Strategy & Action",
-    desc: "We connect you with the right professionals who leverage consumer protection laws on your behalf.",
+    desc: "We connect you with an independent law firm that leverages consumer protection laws on your behalf — with no conflict of interest.",
   },
   {
     number: "03",

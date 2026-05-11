@@ -12,7 +12,7 @@ export const BUSINESS = {
 
 export const STATS = [
   { value: "4,200+", label: "Homeowners Helped" },
-  { value: "94%", label: "Success Rate" },
+  { value: "98%", label: "Success Rate" },
   { value: "$38M+", label: "Saved for Clients" },
   { value: "50", label: "States Served" },
 ] as const;

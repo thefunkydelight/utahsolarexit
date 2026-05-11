@@ -297,6 +297,13 @@ export function ContactForm() {
               </button>
             </div>
 
+            <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 pt-1">
+              {["98% Success Rate", "Built-In Guarantee", "Independent Law Firm"].map((item) => (
+                <span key={item} className="flex items-center gap-1 text-xs text-[#858481]">
+                  <span className="text-[#FFD700]">✓</span> {item}
+                </span>
+              ))}
+            </div>
             <p className="text-xs text-[#858481] text-center">
               We&apos;ll call you within 1 business day. Or call us now:{" "}
               <a href={BUSINESS.phoneHref} className="text-[#FFD700] hover:underline">{BUSINESS.phone}</a>

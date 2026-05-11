@@ -27,11 +27,10 @@ export function Hero() {
         </h1>
 
         <p className="text-sm sm:text-base text-[#858481] mx-auto mb-6 sm:mb-8">
-          We connect Utah homeowners with trusted professionals to exit solar leases, PPAs, and contracts.
-          Free consultation — no obligation.
+          We provide Utah homeowners with a legal, permanent, and stress-free path out of solar agreements — backed by an independent law firm and a 98% success rate.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 mb-8 sm:mb-12">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 mb-6 sm:mb-8">
           <a
             href={BUSINESS.phoneHref}
             className="flex items-center justify-center gap-2 bg-[#FFD700] hover:bg-[#F0A500] text-[#0A0A0A] font-bold text-base px-6 py-3.5 rounded-xl transition-colors"
@@ -45,6 +44,20 @@ export function Hero() {
           >
             Get Free Consultation
           </Link>
+        </div>
+
+        {/* Trust signals */}
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mb-8 sm:mb-10">
+          {[
+            "98% Success Rate",
+            "Built-In Guarantee",
+            "Independent Law Firm",
+            "Free Consultation",
+          ].map((item) => (
+            <span key={item} className="flex items-center gap-1.5 text-xs text-[#858481]">
+              <span className="text-[#FFD700]">✓</span> {item}
+            </span>
+          ))}
         </div>
 
         <Ticker items={TICKER_ITEMS} />
