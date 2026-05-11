@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
 
     await resend.emails.send({
       from: "Solar Exit Utah <onboarding@resend.dev>",
-      to: process.env.LEAD_EMAIL ?? "mvalentine310@gmail.com",
+      to: process.env.LEAD_EMAIL ?? "madeline@solarexitpartners.com",
       subject: `New Lead: ${name} — ${state} — ${solarCompany}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #0A0A0A; color: #F8F8F7; padding: 24px; border-radius: 12px;">

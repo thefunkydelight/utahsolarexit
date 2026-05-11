@@ -6,8 +6,8 @@ export const BUSINESS = {
   city: "Salt Lake City",
   state: "UT",
   stateLabel: "Utah",
-  hours: "Mon–Fri, 8AM–5PM MT",
-  leadEmail: "mvalentine310@gmail.com",
+  hours: "Mon–Sat, 8AM–7PM MT",
+  leadEmail: "madeline@solarexitpartners.com",
 } as const;
 
 export const STATS = [
