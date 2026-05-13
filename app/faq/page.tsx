@@ -10,9 +10,26 @@ export const metadata: Metadata = {
 
 const CATEGORIES = Array.from(new Set(FAQS.map((f) => f.category)));
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function FaqPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <section className="py-20 bg-[#0A0A0A]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h1

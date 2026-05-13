@@ -3,6 +3,7 @@ import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { BUSINESS } from "@/lib/constants";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -23,6 +24,35 @@ export const metadata: Metadata = {
   keywords: "solar contract cancellation Utah, solar exit Utah, cancel solar lease Utah, solar contract help",
 };
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: BUSINESS.name,
+  telephone: BUSINESS.phoneHref.replace("tel:", "+1"),
+  url: "https://utahsolarexit.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: BUSINESS.city,
+    addressRegion: BUSINESS.state,
+    addressCountry: "US",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "08:00",
+      closes: "19:00",
+    },
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "7",
+    bestRating: "5",
+    worstRating: "1",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,6 +61,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
         <style>{`
           :root {
             --font-sans: ${inter.style.fontFamily};
